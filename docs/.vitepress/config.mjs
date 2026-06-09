@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "GNS3 Tutorials",
   description: "Tutorials on using GNS3.",
+  base: "/gns3_tutorials/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
