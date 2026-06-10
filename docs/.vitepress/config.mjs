@@ -5,6 +5,7 @@ export default defineConfig({
   title: "GNS3 Tutorials",
   description: "Tutorials on using GNS3.",
   base: "/gns3_tutorials/",
+  head: [['link', { rel: 'icon', href: 'favicon/favicon.png' }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
