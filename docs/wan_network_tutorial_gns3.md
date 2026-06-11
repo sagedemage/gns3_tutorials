@@ -199,7 +199,7 @@ PC4> ping 192.168.1.3
 These should all work.
 
 ## Save Configs of the Appliances
-Make sure to save the configurations for the routers and PCs. This will save your progress. Whenever you close the project, your configurations will be saved.
+Make sure to save the configurations of the routers and PCs. This will save your progress. Whenever you close the project, your configurations will be saved.
 
 Save the router config for R1:
 ```
