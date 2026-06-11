@@ -196,7 +196,46 @@ PC4 -> PC2:
 PC4> ping 192.168.1.3
 ```
 
-These should all work. Congratulations, you setup a WAN network in GNS3.
+These should all work.
+
+## Save Configs of the Appliances
+Make sure to save the configurations of the routers and PCs. This will save your progress. Whenever you close the project, your configurations will be saved.
+
+Save the router config for R1:
+```
+R1(config)#exit
+R1#copy running-config startup-config
+```
+
+Save the router config for R2:
+```
+R2(config)#exit
+R2#copy running-config startup-config
+```
+
+Save the PC config for PC1:
+```
+PC1> save
+```
+
+Save the PC config for PC2:
+```
+PC2> save
+```
+
+Save the PC config for PC3:
+```
+PC3> save
+```
+
+Save the PC config for PC4:
+```
+PC4> save
+```
+
+Congratulations, you setup a WAN network in GNS3.
 
 ## Resources
-- https://www.sysnettechsolutions.com/en/configure-vpcs-gns3/#how-to-use-virtual-pc-simulator-vpcs-step-2
+- [How to Configure VPCS on GNS3 - SYSNETTECH Solutions](https://www.sysnettechsolutions.com/en/configure-vpcs-gns3/#how-to-use-virtual-pc-simulator-vpcs-step-2)
+- [Your First Cisco Topology - GNS3 Documentation](https://docs.gns3.com/docs/getting-started/your-first-cisco-topology)
+- [VPCS - GNS3 Documentation](https://docs.gns3.com/docs/emulators/vpcs/)
