@@ -42,7 +42,6 @@ PC4:
 - Default Gateway: 192.168.2.1
 
 ## IP Address Table for the Routers
-
 R1:
 - Serial0/0: 10.1.1.1
 - Subnet Mask: 255.255.255.0
@@ -165,7 +164,6 @@ ip addr show
 ```
 
 ## Configure IP Address for the Routers
-
 Configure the IP address of the interfaces of the routers.
 
 Interface Serial0/0 for R1:
@@ -220,7 +218,6 @@ R2(config)# ip route 192.168.1.0 255.255.255.0 10.1.1.1
 ```
 
 ## Check Connectivity Between the PCs
-
 Ping each PC to check if the PCs can communicate with each other.
 
 **PC1 - Alpine Linux**
