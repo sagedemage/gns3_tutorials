@@ -299,6 +299,8 @@ debian@PC4:~$ ping 192.168.1.3
 ## Save Router Configurations
 For each router, save the running config to the startup config.
 
+**Note**: Make sure to save the configuration of the routers. This will save your progress. Whenever you close the project, your configurations will be saved.
+
 Save config for R1:
 ```
 R1# copy run start
