@@ -10,7 +10,22 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'WAN Network Tutorial - GNS3', link: '/wan_network_tutorial_gns3.html' }
+    ],
+
+    sidebar: [
+      {
+        text: 'GNS3 Installation',
+        items: [
+          { text: 'Setup GNS3 on Windows', link: '/tutorials/setup_gns3_on_windows.html' },
+        ]
+      },
+      {
+        text: 'Tutorials',
+        items: [
+          { text: 'Setup WAN Network', link: '/tutorials/setup_wan_network.html' },
+          { text: 'Setup Network with Linux PCs', link: '/tutorials/setup_network_with_linux_pcs.html' },
+        ]
+      }
     ],
 
     socialLinks: [
