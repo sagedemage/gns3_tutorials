@@ -2,7 +2,7 @@
 
 Tutorials on using GNS3.
 
-Read the guide at [Setup GNS3 on Windows Tutorial](https://sagedemage.github.io/gns3_tutorials/).
+Read the guide at [GNS3 Tutorials](https://sagedemage.github.io/gns3_tutorials/).
 
 ## Commands
 
