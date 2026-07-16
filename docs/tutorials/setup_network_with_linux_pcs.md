@@ -313,3 +313,4 @@ R2# copy run start
 - [How to configure static IP address on Alpine Linux - nixCraft](https://www.cyberciti.biz/faq/how-to-configure-static-ip-address-on-alpine-linux/)
 - [How to restart network service in Alpine Linux - nixCraft](https://www.cyberciti.biz/faq/restarting-network-service-in-alpine-linux/)
 - [Alpine Linux Change Hostname (computer name) - nixCraft](https://www.cyberciti.biz/faq/alpine-linux-change-hostname-computer-name/)
+- [NetworkConfiguration - Debian](https://wiki.debian.org/NetworkConfiguration)
