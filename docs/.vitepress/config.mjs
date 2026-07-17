@@ -20,13 +20,35 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Tutorials',
+        text: 'Network Fundamentals',
         items: [
-          { text: 'Setup WAN Network', link: '/tutorials/setup_wan_network.html' },
-          { text: 'Setup Network with Linux PCs', link: '/tutorials/setup_network_with_linux_pcs.html' },
-          { text: 'Configure DHCP', link: '/tutorials/configure_dhcp.html' },
+          { text: 'Configure and Verify IPv4 Addressing', link: '/tutorials/configure_and_verify_ipv4_addressing.html' },
         ]
-      }
+      },
+      {
+        text: 'Network Access',
+        items: [
+
+        ]
+      },
+      {
+        text: 'IP Connectivity',
+        items: [
+          { text: 'Configure and Verify IPv4 Static Routing', link: '/tutorials/configure_and_verify_ipv4_static_routing.html' },
+        ]
+      },
+      {
+        text: 'IP Services',
+        items: [
+          { text: 'Configure and Verify DHCP Client and Server', link: '/tutorials/configure_and_verify_dhcp_client_and_server.html' },
+        ]
+      },
+      {
+        text: 'Security Fundamentals',
+        items: [
+
+        ]
+      },
     ],
 
     socialLinks: [

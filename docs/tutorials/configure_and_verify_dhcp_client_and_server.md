@@ -1,7 +1,7 @@
-# Setup Network with Linux PCs
-This is a guide to setup a network with Linux PCs.
+# Configure and Verify DHCP Client and Server
+This is a guide to configure and verify DHCP client and server in the network with Linux PCs.
 
-![Setup Network with Linux PCs](../images/Setup_Network_with_Linux_PCs.png)
+![Configure DHCP](../images/Configure_and_Verify_DHCP_Client_and_Server.png)
 
 ## Devices
 Router:
@@ -22,22 +22,22 @@ Debian Linux PCs:
 
 ## IP Address Table for the PCs
 PC1:
-- IPv4 Address: 192.168.1.2
+- IPv4 Address: 192.168.1.X
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.1.1
 
 PC2:
-- IPv4 Address: 192.168.1.3
+- IPv4 Address: 192.168.1.X
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.1.1
 
 PC3:
-- IPv4 Address: 192.168.2.2
+- IPv4 Address: 192.168.2.X
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.2.1
 
 PC4:
-- IPv4 Address: 192.168.2.3
+- IPv4 Address: 192.168.2.X
 - Subnet Mask: 255.255.255.0
 - Default Gateway: 192.168.2.1
 
@@ -54,116 +54,7 @@ R2:
 - FastEthernet0/0: 192.168.2.1
 - Subnet Mask: 255.255.255.0
 
-## Configure the IP Address for the PCs
-Configure the IP address for the PCs.
-
-**PC1 - Alpine Linux**
-
-On PC1, open the file, `/etc/network/interfaces`.
-```
-PC1:~# vi /etc/network/interfaces
-```
-
-Configure the IP address for PC1 in `/etc/network/interfaces`:
-```
-auto eth0
-iface eth0 inet static
-    address 192.168.1.2/24
-    gateway 192.168.1.1
-```
-
-Restart the networking service using the rc-service command
-```
-PC1:~# rc-service networking restart
-```
-
-Check the IP address of the interface eth0:
-```
-ip addr show
-```
-
-**PC2 - Debian**
-
-This is the username and password for the Debian VMs:
-- username: debian
-- password: debian
-
-On PC2, open the file, `/etc/network/interfaces`.
-```
-debian@PC2:~$ sudo vim /etc/network/interfaces
-```
-
-Configure the IP address for PC2 in `/etc/network/interfaces`:
-```
-auto ens4
-iface ens4 inet static
-    address 192.168.1.3
-    netmask 255.255.255.0
-    gateway 192.168.1.1
-```
-
-Restart the networking service using the rc-service command
-```
-debian@PC2:~$ sudo systemctl restart networking
-```
-
-Check the IP address of the interface ens4:
-```
-ip addr show
-```
-
-**PC3 - Alpine Linux**
-
-On PC3, open the file, `/etc/network/interfaces`.
-```
-PC3:~# vi /etc/network/interfaces
-```
-
-Configure the IP address for PC3 in `/etc/network/interfaces`:
-```
-auto eth0
-iface eth0 inet static
-    address 192.168.2.2/24
-    gateway 192.168.2.1
-```
-
-Restart the networking service using the rc-service command:
-```
-PC3:~# rc-service networking restart
-```
-
-Check the IP address of the interface eth0:
-```
-ip addr show
-```
-
-**PC4 - Debian**
-
-On PC4, open the file, `/etc/network/interfaces`.
-```
-debian@PC4:~$ sudo vim /etc/network/interfaces
-```
-
-Configure the IP address for PC4 in `/etc/network/interfaces`:
-```
-auto ens4
-iface ens4 inet static
-    address 192.168.2.3
-    netmask 255.255.255.0
-    gateway 192.168.2.1
-```
-
-Restart the networking service using the rc-service command
-```
-debian@PC4:~$ sudo systemctl restart networking
-```
-
-Check the IP address of the interface ens4:
-```
-ip addr show
-```
-
-## Configure IP Address for the Routers
+## Configure IP Address of the Routers
 Configure the IP address of the interfaces of the routers.
 
 Interface Serial0/0 for R1:
@@ -195,9 +86,9 @@ R1(config-if)# exit
 
 Interface FastEthernet0/0 for R2:
 ```
-R2# conf t
+R2# conf t 
 R2(config)# int FastEthernet0/0
-R2(config-if)# ip add 192.168.2.1 255.255.255.0
+R2(config-if)# ip add 192.168.2.1 255.255.255.0  
 R2(config-if)# no shut
 R1(config-if)# end
 ```
@@ -207,94 +98,156 @@ Configure static routes for the routers.
 
 Configure a static route on R1:
 ```
-R1# config t
+R1# config t 
 R1(config)# ip route 192.168.2.0 255.255.255.0 10.1.1.2
 ```
 
 Configure a static route on R2:
 ```
-R2#config t
+R2#config t 
 R2(config)# ip route 192.168.1.0 255.255.255.0 10.1.1.1
 ```
 
-## Check Connectivity Between the PCs
-Ping each PC to check if the PCs can communicate with each other.
+## Configure DHCP
+Configure DHCP on the routers.
+
+Create a DHCP pool called Pool0DHCP with the following IP addresses for the network, default-router, and dns-server on R1.
+```
+R1# conf t
+R1(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10
+R1(config)# ip dhcp pool Pool0DHCP
+R1(dhcp-config)# network 192.168.1.0 255.255.255.0
+R1(dhcp-config)# default-router 192.168.1.1
+R1(dhcp-config)# dns-server 192.168.1.1
+R1(dhcp-config)# end
+```
+
+Create a DHCP pool called Pool0DHCP with the following IP addresses for the network, default-router, and dns-server on R2.
+```
+R2# conf t
+R2(config)# ip dhcp excluded-address 192.168.2.1 192.168.2.10
+R2(config)# ip dhcp pool Pool0DHCP
+R2(dhcp-config)# network 192.168.2.0 255.255.255.0
+R2(dhcp-config)# default-router 192.168.2.1
+R2(dhcp-config)# dns-server 192.168.2.1
+R2(dhcp-config)# end
+```
+
+## Configure the IP Address for the PCs
+Configure the IP address for the PCs.
 
 **PC1 - Alpine Linux**
 
-Ping PCs from PC1
-
-Ping PC2:
+On PC1, open the file, `/etc/network/interfaces`.
 ```
-PC1:~# ping 192.168.1.3
+PC1:~# vi /etc/network/interfaces
 ```
 
-Ping PC3:
+Configure DHCP for PC1 in `/etc/network/interfaces`:
 ```
-PC1:~# ping 192.168.2.2
+auto eth0
+iface eth0 inet dhcp
 ```
 
-Ping PC4:
+Restart the networking service using the rc-service command
 ```
-PC1:~# ping 192.168.2.3
+PC1:~# rc-service networking restart
+```
+
+Check the IP address of the interface eth0:
+```
+ip addr show
 ```
 
 **PC2 - Debian**
 
-Ping PCs from PC2
+This is the username and password for the Debian VMs:
+- username: debian
+- password: debian
 
-Ping PC1:
+On PC2, open the file, `/etc/network/interfaces`.
 ```
-debian@PC2:~$ ping 192.168.1.2
-```
-
-Ping PC3:
-```
-debian@PC2:~$ ping 192.168.2.2
+debian@PC2:~$ sudo vim /etc/network/interfaces
 ```
 
-Ping PC4:
+Configure DHCP for PC2 in `/etc/network/interfaces`:
 ```
-debian@PC2:~$ ping 192.168.2.3
+auto ens4
+allow-hotplug ens4
+iface ens4 inet dhcp
 ```
+
+Restart the networking service using the rc-service command
+```
+debian@PC2:~$ sudo systemctl restart networking
+```
+
+Check the IP address of the interface ens4:
+```
+ip addr show
+```
+
+**Note**: You probably have to restart the networking service twice for the static IP address to go away.
 
 **PC3 - Alpine Linux**
 
-Ping PCs from PC3
-
-Ping PC4:
+On PC3, open the file, `/etc/network/interfaces`.
 ```
-PC3:~# ping 192.168.2.3
+PC3:~# vi /etc/network/interfaces
 ```
 
-Ping -> PC1:
+Configure DHCP for PC3 in `/etc/network/interfaces`:
 ```
-PC3:~# ping 192.168.1.2
+auto eth0
+iface eth0 inet dhcp
 ```
 
-Ping -> PC2:
+Restart the networking service using the rc-service command:
 ```
-PC3:~# ping 192.168.1.3
+PC3:~# rc-service networking restart
+```
+
+Check the IP address of the interface eth0:
+```
+ip addr show
 ```
 
 **PC4 - Debian**
 
+On PC4, open the file, `/etc/network/interfaces`.
+```
+debian@PC4:~$ sudo vim /etc/network/interfaces
+```
+
+Configure DHCP for PC4 in `/etc/network/interfaces`:
+```
+auto ens4
+allow-hotplug ens4
+iface ens4 inet dhcp
+```
+
+Restart the networking service using the rc-service command
+```
+debian@PC4:~$ sudo systemctl restart networking
+```
+
+Check the IP address of the interface ens4:
+```
+ip addr show
+```
+
+**Note**: You probably have to restart the networking service twice for the static IP address to go away.
+
+## Check Connectivity Between the PCs
+Ping each PC to check if the PCs can communicate with each other.
+
+Ping PCs from PC1
+
+Ping PCs from PC2
+
+Ping PCs from PC3
+
 Ping PCs from PC4
-
-Ping PC3:
-```
-debian@PC4:~$ ping 192.168.2.2
-```
-
-Ping PC1:
-```
-debian@PC4:~$ ping 192.168.1.2
-```
-
-Ping PC2:
-```
-debian@PC4:~$ ping 192.168.1.3
-```
 
 ## Save Router Configurations
 For each router, save the running config to the startup config.
