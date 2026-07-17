@@ -24,6 +24,7 @@ export default defineConfig({
         items: [
           { text: 'Setup WAN Network', link: '/tutorials/setup_wan_network.html' },
           { text: 'Setup Network with Linux PCs', link: '/tutorials/setup_network_with_linux_pcs.html' },
+          { text: 'Configure DHCP', link: '/tutorials/configure_dhcp.html' },
         ]
       }
     ],
