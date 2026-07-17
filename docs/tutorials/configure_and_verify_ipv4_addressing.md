@@ -1,7 +1,7 @@
-# Setup WAN Network
-This is a guide to setup a WAN network in GNS3.
+# Configure and Verify IPv4 Addressing
+This is a guide to configure and verify IPv4 addressing.
 
-![Setup WAN Network](../images/Setup_WAN_Network.png)
+![Configure and Verify IPv4 Addressing](../images/Configure_and_Verify_IPv4_Addressing.png)
 
 ## Devices
 Router:
@@ -112,103 +112,68 @@ R2(config-if)#no shut
 R1(config-if)#exit
 ```
 
-## Configure Routing
-Configure static routes for the two routers in order for the PCs to communicate with each other.
-
-R1:
-```
-R1#config t 
-R1(config)#ip route 192.168.2.0 255.255.255.0 10.1.1.2
-```
-
-R2:
-```
-R2#config t 
-R2(config)#ip route 192.168.1.0 255.255.255.0 10.1.1.1
-```
-
 ## Check Connectivity Between the PCs
 Ping each PC to check if the PCs can communicate with each other.
 
 **PC1**
 
-Ping PCs from PC1
+Ping the devices from PC1
+
+Ping R1:
+```
+PC1> ping 192.168.1.1
+```
 
 Ping PC2:
 ```
 PC1> ping 192.168.1.3
 ```
 
-Ping PC3:
-```
-PC1> ping 192.168.2.2
-```
-
-Ping PC4:
-```
-PC1> ping 192.168.2.3
-```
-
 **PC2**
 
-Ping PCs from PC2
+Ping the devices from PC2
+
+Ping R1:
+```
+PC2> ping 192.168.1.1
+```
 
 Ping PC1:
 ```
 PC2> ping 192.168.1.2
 ```
 
-Ping PC3:
-```
-PC2> ping 192.168.2.2
-```
-
-Ping PC4:
-```
-PC2> ping 192.168.2.3
-```
-
 **PC3**
 
-Ping PCs from PC3
+Ping the devices from PC3
+
+Ping R2:
+```
+PC3> ping 192.168.2.1
+```
 
 Ping PC4:
 ```
 PC3> ping 192.168.2.3
 ```
 
-Ping PC1:
-```
-PC3> ping 192.168.1.2
-```
-
-Ping PC2:
-```
-PC3> ping 192.168.1.3
-```
-
 **PC4**
 
-Ping PCs from PC4
+Ping the devices from PC4
+
+Ping R2:
+```
+PC4> ping 192.168.2.1
+```
 
 Ping PC3:
 ```
 PC4> ping 192.168.2.2
 ```
 
-Ping PC1:
-```
-PC4> ping 192.168.1.2
-```
+These should all work.
 
-Ping PC2:
-```
-PC4> ping 192.168.1.3
-```
-
-These should all work. Congratulations, you setup a WAN network in GNS3.
-
-## Save Configs of the PCs
+## Save PC Configurations
 Save the configs of each PC.
 
 **Note**: Make sure to save the configuration of the PCs. This will save your progress. Whenever you close the project, your configurations will be saved.
