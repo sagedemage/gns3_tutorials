@@ -39,7 +39,6 @@ PC4:
 - Default Gateway: 192.168.2.1
 
 ## IP Address Table for the Routers
-
 R1:
 - Interface: Serial0/0: 
 	- IPv4 Address: 10.1.1.1
