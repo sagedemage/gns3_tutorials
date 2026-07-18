@@ -345,3 +345,4 @@ SW2# copy run start
 - [How to Configure DHCP in Cisco Packet Tracer - SYSNETTECH Solutions](https://www.sysnettechsolutions.com/en/configure-dhcp-in-cisco-packet-tracer/)
 - [3.3.12 Packet Tracer – VLAN Configuration (Instructions Answer) - ITExamAnswers.net](https://itexamanswers.net/3-3-12-packet-tracer-vlan-configuration-instructions-answer.html)
 - [How do I set a static IP in Ubuntu? - ask Ubuntu](https://askubuntu.com/questions/766131/how-do-i-set-a-static-ip-in-ubuntu)
+- [Configuring networks - Ubuntu Server](https://ubuntu.com/server/docs/explanation/networking/configuring-networks/)
