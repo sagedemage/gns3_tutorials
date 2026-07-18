@@ -52,6 +52,45 @@ R2:
     - IPv4 Address: 192.168.2.1
     - Subnet Mask: 255.255.255.0
 
+## Configure IP Address of the Routers
+Configure the IP address of the interfaces of the routers.
+
+Interface Serial0/0 for R1:
+```
+R1# config t
+R1(config)# int Serial0/0
+R1(config-if)# ip add 10.1.1.1 255.255.255.0
+R1(config-if)# no shut
+R1(config-if)# exit
+```
+
+Interface FastEthernet0/0 for R1:
+```
+R1# config t
+R1(config)# int FastEthernet0/0
+R1(config-if)# ip add 192.168.1.1 255.255.255.0
+R1(config-if)# no shut
+R1(config-if)# exit
+```
+
+Interface Serial0/0 for R2:
+```
+R2# config t
+R2(config)# int Serial0/0
+R2(config-if)# ip add 10.1.1.2 255.255.255.0
+R2(config-if)# no shut
+R1(config-if)# exit
+```
+
+Interface FastEthernet0/0 for R2:
+```
+R2# config t
+R2(config)# int FastEthernet0/0
+R2(config-if)# ip add 192.168.2.1 255.255.255.0
+R2(config-if)# no shut
+R1(config-if)# exit
+```
+
 ## Configure the IP Address for the PCs
 Configure the IP address for the PCs.
 
@@ -73,45 +112,6 @@ PC3> ip 192.168.2.2/24 192.168.2.1
 Set the IP address and the default gateway address for PC4:
 ```
 PC4> ip 192.168.2.3/24 192.168.2.1
-```
-
-## Configure IP Address of the Routers
-Configure the IP address of the interfaces of the routers.
-
-Interface Serial0/0 for R1:
-```
-R1#config t
-R1(config)#int Serial0/0
-R1(config-if)#ip add 10.1.1.1 255.255.255.0
-R1(config-if)#no shut
-R1(config-if)#exit
-```
-
-Interface FastEthernet0/0 for R1:
-```
-R1#config t
-R1(config)#int FastEthernet0/0
-R1(config-if)#ip add 192.168.1.1 255.255.255.0
-R1(config-if)#no shut
-R1(config-if)#exit
-```
-
-Interface Serial0/0 for R2:
-```
-R2#config t
-R2(config)#int Serial0/0
-R2(config-if)#ip add 10.1.1.2 255.255.255.0
-R2(config-if)#no shut
-R1(config-if)#exit
-```
-
-Interface FastEthernet0/0 for R2:
-```
-R2#config t 
-R2(config)#int FastEthernet0/0
-R2(config-if)#ip add 192.168.2.1 255.255.255.0  
-R2(config-if)#no shut
-R1(config-if)#exit
 ```
 
 ## Check Connectivity Between the PCs

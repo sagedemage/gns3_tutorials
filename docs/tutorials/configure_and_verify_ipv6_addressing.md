@@ -17,7 +17,7 @@ List of Devices:
 	- Device Name: Debian 12.6
 	- Quantity: 2
 
-## IP Address Table for the PCs
+## IPv6 Address Table for the PCs
 PC1:
 - IPv6 Address: 2001:db8:1:1::2/64
 - Default Gateway: FE80::1
@@ -49,7 +49,7 @@ R2:
 - Interface: Serial0/0: 
 	- IPv6 Address:  2001:db8:1:aaaa::2/64
 
-## Configure IP Address of the Routers
+## Configure IPv6 Address of the Routers
 Configure the IPv6 address for the interfaces of the routers.
 
 Interface Serial0/0 for R1:
@@ -117,7 +117,7 @@ PC1:~# rc-service networking restart
 
 Check the IP address of the interface eth0:
 ```
-ip addr show
+PC1:~# ip addr show
 ```
 
 **PC2 - Debian**
@@ -146,7 +146,7 @@ debian@PC2:~$ sudo systemctl restart networking
 
 Check the IP address of the interface ens4:
 ```
-ip addr show
+debian@PC2:~$ ip addr show
 ```
 
 **PC3 - Alpine Linux**
@@ -171,7 +171,7 @@ PC3:~# rc-service networking restart
 
 Check the IP address of the interface eth0:
 ```
-ip addr show
+PC3:~# ip addr show
 ```
 
 **PC4 - Debian**
@@ -196,8 +196,9 @@ debian@PC4:~$ sudo systemctl restart networking
 
 Check the IP address of the interface ens4:
 ```
-ip addr show
+debian@PC4:~$ ip addr show
 ```
+
 ## Check Connectivity Between the PCs
 Ping each PC to check if the PCs can communicate with each other.
 
