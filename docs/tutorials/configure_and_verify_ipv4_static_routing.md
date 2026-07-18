@@ -55,8 +55,6 @@ R2:
     - IPv4 Address: 192.168.2.1
     - Subnet Mask: 255.255.255.0
 
-
-
 ## Configure IP Address for the Routers
 Configure the IP address of the interfaces of the routers.
 
