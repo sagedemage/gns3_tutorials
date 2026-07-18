@@ -136,7 +136,7 @@ PC1:~# rc-service networking restart
 
 Check the IP address of the interface eth0:
 ```
-ip addr show
+PC1:~# ip addr show
 ```
 
 **PC2 - Debian**
@@ -166,7 +166,7 @@ debian@PC2:~$ sudo systemctl restart networking
 
 Check the IP address of the interface ens4:
 ```
-ip addr show
+debian@PC2:~$ ip addr show
 ```
 
 **PC3 - Alpine Linux**
@@ -191,7 +191,7 @@ PC3:~# rc-service networking restart
 
 Check the IP address of the interface eth0:
 ```
-ip addr show
+PC3:~# ip addr show
 ```
 
 **PC4 - Debian**
@@ -217,7 +217,7 @@ debian@PC4:~$ sudo systemctl restart networking
 
 Check the IP address of the interface ens4:
 ```
-ip addr show
+debian@PC4:~$ ip addr show
 ```
 
 ## Check Connectivity Between the PCs
