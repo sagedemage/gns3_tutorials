@@ -306,6 +306,7 @@ Ping R2:
 ```
 debian@Server1:~$ ping 192.168.2.1
 ```
+
 ## Save Router Configurations
 
 Go to each router and save the running configuration to the startup configuration.
