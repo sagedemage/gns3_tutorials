@@ -3,18 +3,16 @@ This is a guide to configure and verify IPv4 addressing.
 
 ![Configure and Verify IPv4 Addressing](../images/Configure_and_Verify_IPv4_Addressing.png)
 
-## Devices
-Router:
-- Router Model Name: Cisco 3745
-- Quantity: 2
-
-Switch:
-- Switch Model Name: Ethernet switch
-- Quantity: 2
-
-PC:
-- PC Model Name: VPCS
-- Quantity: 4
+List of Devices:
+- Routers:
+	- Device Name: Cisco 3745
+	- Quantity: 2
+- Switches:
+	- Device Name: Ethernet switch
+	- Quantity: 2
+- PCs:
+	- Device Name: VPCS
+	- Quantity: 4
 
 ## IP Address Table for the PCs
 PC1:
@@ -39,16 +37,20 @@ PC4:
 
 ## IP Address Table for the Routers
 R1:
-- Serial0/0: 10.1.1.1
-- Subnet Mask: 255.255.255.0
-- FastEthernet0/0: 192.168.1.1
-- Subnet Mask: 255.255.255.0
+- Interface: Serial0/0
+    - IPv4 Address: 10.1.1.1
+    - Subnet Mask: 255.255.255.0
+- Interface: FastEthernet0/0
+    - IPv4 Address: 192.168.1.1
+    - Subnet Mask: 255.255.255.0
 
 R2:
-- Serial0/0: 10.1.1.2
-- Subnet Mask: 255.255.255.0
-- FastEthernet0/0: 192.168.2.1
-- Subnet Mask: 255.255.255.0
+- Interface: Serial0/0
+    - IPv4 Address: 10.1.1.2
+    - Subnet Mask: 255.255.255.0
+- Interface: FastEthernet0/0
+    - IPv4 Address: 192.168.2.1
+    - Subnet Mask: 255.255.255.0
 
 ## Configure the IP Address for the PCs
 Configure the IP address for the PCs.

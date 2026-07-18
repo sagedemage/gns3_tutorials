@@ -23,6 +23,7 @@ export default defineConfig({
         text: 'Network Fundamentals',
         items: [
           { text: 'Configure and Verify IPv4 Addressing', link: '/tutorials/configure_and_verify_ipv4_addressing.html' },
+          { text: 'Configure and Verify IPv6 Addressing', link: '/tutorials/configure_and_verify_ipv6_addressing.html' },
         ]
       },
       {
