@@ -17,7 +17,7 @@ List of Devices:
 	- Device Name: Debian 12.6
 	- Quantity: 2
 
-## IP Address Table for the PCs
+## IPv6 Address Table for the PCs
 PC1:
 - IPv6 Address: 2001:db8:1:1::2/64
 - Default Gateway: FE80::1
@@ -49,7 +49,7 @@ R2:
 - Interface: Serial0/0: 
 	- IPv6 Address:  2001:db8:1:aaaa::2/64
 
-## Configure IP Address of the Routers
+## Configure IPv6 Address of the Routers
 Configure the IPv6 address for the interfaces of the routers.
 
 Interface Serial0/0 for R1:

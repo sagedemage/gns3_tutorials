@@ -52,29 +52,6 @@ R2:
     - IPv4 Address: 192.168.2.1
     - Subnet Mask: 255.255.255.0
 
-## Configure the IP Address for the PCs
-Configure the IP address for the PCs.
-
-Set the IP address and the default gateway address for PC1:
-```
-PC1> ip 192.168.1.2/24 192.168.1.1
-```
-
-Set the IP address and the default gateway address for PC2:
-```
-PC2> ip 192.168.1.3/24 192.168.1.1
-```
-
-Set the IP address and the default gateway address for PC3:
-```
-PC3> ip 192.168.2.2/24 192.168.2.1
-```
-
-Set the IP address and the default gateway address for PC4:
-```
-PC4> ip 192.168.2.3/24 192.168.2.1
-```
-
 ## Configure IP Address of the Routers
 Configure the IP address of the interfaces of the routers.
 
@@ -112,6 +89,29 @@ R2(config)#int FastEthernet0/0
 R2(config-if)#ip add 192.168.2.1 255.255.255.0  
 R2(config-if)#no shut
 R1(config-if)#exit
+```
+
+## Configure the IP Address for the PCs
+Configure the IP address for the PCs.
+
+Set the IP address and the default gateway address for PC1:
+```
+PC1> ip 192.168.1.2/24 192.168.1.1
+```
+
+Set the IP address and the default gateway address for PC2:
+```
+PC2> ip 192.168.1.3/24 192.168.1.1
+```
+
+Set the IP address and the default gateway address for PC3:
+```
+PC3> ip 192.168.2.2/24 192.168.2.1
+```
+
+Set the IP address and the default gateway address for PC4:
+```
+PC4> ip 192.168.2.3/24 192.168.2.1
 ```
 
 ## Check Connectivity Between the PCs

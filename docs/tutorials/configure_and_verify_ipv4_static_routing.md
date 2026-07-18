@@ -55,6 +55,62 @@ R2:
     - IPv4 Address: 192.168.2.1
     - Subnet Mask: 255.255.255.0
 
+
+
+## Configure IP Address for the Routers
+Configure the IP address of the interfaces of the routers.
+
+Interface Serial0/0 for R1:
+```
+R1# conf t
+R1(config)# int Serial0/0
+R1(config-if)# ip add 10.1.1.1 255.255.255.0
+R1(config-if)# no shut
+R1(config-if)# exit
+```
+
+Interface FastEthernet0/0 for R1:
+```
+R1# conf t
+R1(config)# int FastEthernet0/0
+R1(config-if)# ip add 192.168.1.1 255.255.255.0
+R1(config-if)# no shut
+R1(config-if)# end
+```
+
+Interface Serial0/0 for R2:
+```
+R2# conf t
+R2(config)# int Serial0/0
+R2(config-if)# ip add 10.1.1.2 255.255.255.0
+R2(config-if)# no shut
+R1(config-if)# exit
+```
+
+Interface FastEthernet0/0 for R2:
+```
+R2# conf t
+R2(config)# int FastEthernet0/0
+R2(config-if)# ip add 192.168.2.1 255.255.255.0
+R2(config-if)# no shut
+R1(config-if)# end
+```
+
+## Configure Static Routing
+Configure static routes for the routers.
+
+Configure a static route on R1:
+```
+R1# config t
+R1(config)# ip route 192.168.2.0 255.255.255.0 10.1.1.2
+```
+
+Configure a static route on R2:
+```
+R2#config t
+R2(config)# ip route 192.168.1.0 255.255.255.0 10.1.1.1
+```
+
 ## Configure the IP Address for the PCs
 Configure the IP address for the PCs.
 
@@ -162,60 +218,6 @@ debian@PC4:~$ sudo systemctl restart networking
 Check the IP address of the interface ens4:
 ```
 ip addr show
-```
-
-## Configure IP Address for the Routers
-Configure the IP address of the interfaces of the routers.
-
-Interface Serial0/0 for R1:
-```
-R1# conf t
-R1(config)# int Serial0/0
-R1(config-if)# ip add 10.1.1.1 255.255.255.0
-R1(config-if)# no shut
-R1(config-if)# exit
-```
-
-Interface FastEthernet0/0 for R1:
-```
-R1# conf t
-R1(config)# int FastEthernet0/0
-R1(config-if)# ip add 192.168.1.1 255.255.255.0
-R1(config-if)# no shut
-R1(config-if)# end
-```
-
-Interface Serial0/0 for R2:
-```
-R2# conf t
-R2(config)# int Serial0/0
-R2(config-if)# ip add 10.1.1.2 255.255.255.0
-R2(config-if)# no shut
-R1(config-if)# exit
-```
-
-Interface FastEthernet0/0 for R2:
-```
-R2# conf t
-R2(config)# int FastEthernet0/0
-R2(config-if)# ip add 192.168.2.1 255.255.255.0
-R2(config-if)# no shut
-R1(config-if)# end
-```
-
-## Configure Static Routing
-Configure static routes for the routers.
-
-Configure a static route on R1:
-```
-R1# config t
-R1(config)# ip route 192.168.2.0 255.255.255.0 10.1.1.2
-```
-
-Configure a static route on R2:
-```
-R2#config t
-R2(config)# ip route 192.168.1.0 255.255.255.0 10.1.1.1
 ```
 
 ## Check Connectivity Between the PCs
