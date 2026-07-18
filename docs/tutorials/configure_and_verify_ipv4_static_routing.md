@@ -43,16 +43,20 @@ PC4:
 
 ## IP Address Table for the Routers
 R1:
-- Serial0/0: 10.1.1.1
-- Subnet Mask: 255.255.255.0
-- FastEthernet0/0: 192.168.1.1
-- Subnet Mask: 255.255.255.0
+- Interface: Serial0/0
+    - IPv4 Address: 10.1.1.1
+    - Subnet Mask: 255.255.255.0
+- Interface: FastEthernet0/0
+    - IPv4 Address: 192.168.1.1
+    - Subnet Mask: 255.255.255.0
 
 R2:
-- Serial0/0: 10.1.1.2
-- Subnet Mask: 255.255.255.0
-- FastEthernet0/0: 192.168.2.1
-- Subnet Mask: 255.255.255.0
+- Interface: Serial0/0
+    - IPv4 Address: 10.1.1.2
+    - Subnet Mask: 255.255.255.0
+- Interface: FastEthernet0/0
+    - IPv4 Address: 192.168.2.1
+    - Subnet Mask: 255.255.255.0
 
 ## Configure the IP Address for the PCs
 Configure the IP address for the PCs.
