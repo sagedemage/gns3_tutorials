@@ -3,22 +3,19 @@ This is a guide to configure and verify DHCP client and server in the network wi
 
 ![Configure DHCP](../images/Configure_and_Verify_DHCP_Client_and_Server.png)
 
-## Devices
-Router:
-- Device Name: Cisco 3745
-- Quantity: 2
-
-Switch:
-- Device Name: Ethernet switch
-- Quantity: 2
-
-Alpine Linux PCs:
-- Device Name: Alpine Linux Virt 3.18.4
-- Quantity: 2
-
-Debian Linux PCs:
-- Device Name: Debian 12.6
-- Quantity: 2
+List of Devices:
+- Routers:
+	- Device Name: Cisco 3745
+	- Quantity: 2
+- Switches:
+	- Device Name: Ethernet switch
+	- Quantity: 2
+- Alpine Linux PCs:
+	- Device Name: Alpine Linux Virt 3.18.4
+	- Quantity: 2
+- Debian Linux PCs:
+	- Device Name: Debian 12.6
+	- Quantity: 2
 
 ## IP Address Table for the PCs
 PC1:

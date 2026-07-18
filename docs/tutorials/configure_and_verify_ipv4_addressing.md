@@ -3,18 +3,16 @@ This is a guide to configure and verify IPv4 addressing.
 
 ![Configure and Verify IPv4 Addressing](../images/Configure_and_Verify_IPv4_Addressing.png)
 
-## Devices
-Router:
-- Router Model Name: Cisco 3745
-- Quantity: 2
-
-Switch:
-- Switch Model Name: Ethernet switch
-- Quantity: 2
-
-PC:
-- PC Model Name: VPCS
-- Quantity: 4
+List of Devices:
+- Routers:
+	- Device Name: Cisco 3745
+	- Quantity: 2
+- Switches:
+	- Device Name: Ethernet switch
+	- Quantity: 2
+- PCs:
+	- Device Name: VPCS
+	- Quantity: 4
 
 ## IP Address Table for the PCs
 PC1:
