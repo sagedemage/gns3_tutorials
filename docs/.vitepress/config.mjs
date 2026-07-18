@@ -30,7 +30,7 @@ export default defineConfig({
       {
         text: 'Network Access',
         items: [
-
+          { text: 'Configure and Verify VLANs', link: '/tutorials/configure_and_verify_vlans.html' },
         ]
       },
       {

@@ -119,7 +119,7 @@ Ping each PC to check if the PCs can communicate with each other.
 
 **PC1**
 
-Ping the devices from PC1
+Ping the devices from PC1.
 
 Ping R1:
 ```
@@ -133,7 +133,7 @@ PC1> ping 192.168.1.3
 
 **PC2**
 
-Ping the devices from PC2
+Ping the devices from PC2.
 
 Ping R1:
 ```
@@ -147,7 +147,7 @@ PC2> ping 192.168.1.2
 
 **PC3**
 
-Ping the devices from PC3
+Ping the devices from PC3.
 
 Ping R2:
 ```
@@ -161,7 +161,7 @@ PC3> ping 192.168.2.3
 
 **PC4**
 
-Ping the devices from PC4
+Ping the devices from PC4.
 
 Ping R2:
 ```

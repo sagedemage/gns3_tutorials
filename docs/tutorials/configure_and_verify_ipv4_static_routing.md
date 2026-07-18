@@ -223,7 +223,7 @@ Ping each PC to check if the PCs can communicate with each other.
 
 **PC1 - Alpine Linux**
 
-Ping PCs from PC1
+Ping PCs from PC1.
 
 Ping PC2:
 ```
@@ -242,7 +242,7 @@ PC1:~# ping 192.168.2.3
 
 **PC2 - Debian**
 
-Ping PCs from PC2
+Ping PCs from PC2.
 
 Ping PC1:
 ```
@@ -261,7 +261,7 @@ debian@PC2:~$ ping 192.168.2.3
 
 **PC3 - Alpine Linux**
 
-Ping PCs from PC3
+Ping PCs from PC3.
 
 Ping PC4:
 ```
@@ -280,7 +280,7 @@ PC3:~# ping 192.168.1.3
 
 **PC4 - Debian**
 
-Ping PCs from PC4
+Ping PCs from PC4.
 
 Ping PC3:
 ```

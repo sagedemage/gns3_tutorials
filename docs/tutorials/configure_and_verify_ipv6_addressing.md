@@ -204,7 +204,7 @@ Ping each PC to check if the PCs can communicate with each other.
 
 **PC1 - Alpine Linux**
 
-Ping devices from PC1
+Ping devices from PC1.
 
 Ping R1:
 ```
@@ -218,7 +218,7 @@ PC1:~# ping 2001:db8:1:1::3
 
 **PC2 - Debian**
 
-Ping devices from PC2
+Ping devices from PC2.
 
 Ping R1:
 ```
@@ -232,7 +232,7 @@ debian@PC2:~$ ping 2001:db8:1:1::2
 
 **PC3 - Alpine Linux**
 
-Ping devices from PC3
+Ping devices from PC3.
 
 Ping R2:
 ```
@@ -246,7 +246,7 @@ PC3:~# ping 2001:db8:1:2::3
 
 **PC4 - Debian**
 
-Ping devices from PC4
+Ping devices from PC4.
 
 Ping R2:
 ```
