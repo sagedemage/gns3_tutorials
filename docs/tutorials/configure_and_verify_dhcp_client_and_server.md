@@ -242,13 +242,13 @@ debian@PC4:~$ ip addr show
 ## Check Connectivity Between the PCs
 Ping each PC to check if the PCs can communicate with each other.
 
-Ping PCs from PC1
+Ping PCs from PC1.
 
-Ping PCs from PC2
+Ping PCs from PC2.
 
-Ping PCs from PC3
+Ping PCs from PC3.
 
-Ping PCs from PC4
+Ping PCs from PC4.
 
 ## Save Router Configurations
 For each router, save the running config to the startup config.
