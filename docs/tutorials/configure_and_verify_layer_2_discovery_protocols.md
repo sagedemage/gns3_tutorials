@@ -319,7 +319,6 @@ R1# ping 10.1.2.1
 ```
 
 ## Save Router Configurations
-
 Go to each router and save the running configuration to the startup configuration.
 
 Save the config for R1:
@@ -338,7 +337,6 @@ R3# copy run start
 ```
 
 ## Save Switch Configurations
-
 Go to each switch and save the running configuration to the startup configuration.
 
 Save the config for SW1:
