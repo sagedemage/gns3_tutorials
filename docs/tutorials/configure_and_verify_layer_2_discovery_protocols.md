@@ -1,5 +1,5 @@
 # Configure and Verify Layer 2 Discovery Protocols
-This is a guide to configure and verify layer 2 discovery protocols. You will configure and verify Cisco Discovery Protocol (CDP) on the switches and routers. You will also configure and verify Link Layer Discovery Protocol (LLDP) on the switches.
+This is a guide to configure and verify layer 2 discovery protocols. You will configure and verify Cisco Discovery Protocol (CDP) on the switches and routers. You will configure and verify Link Layer Discovery Protocol (LLDP) on the switches.
 
 ![Configure and Verify Layer 2 Discovery Protocols](../images/Configure_and_Verify_Layer_2_Discovery_Protocols.png)
 
