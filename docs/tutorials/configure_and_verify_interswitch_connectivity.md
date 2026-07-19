@@ -4,12 +4,12 @@ This is a guide to configure and verify interswitch connectivity.
 ![Configure and Verify Interswitch Connectivity](../images/Configure_and_Verify_Interswitch_Connectivity.png)
 
 List of Devices:
-1. Routers:
-	1. Quantity: 6
-	2. Device Name: Cisco 3745
-2. Switches:
-	1. Quantity: 3
-	2. Device Name: Cisco IOSvL215.2
+- Routers:
+    - Quantity: 6
+    - Device Name: Cisco 3745
+- Switches:
+    - Quantity: 3
+    - Device Name: Cisco IOSvL215.2
 
 ## IP Address Table of the Routers
 R1:
