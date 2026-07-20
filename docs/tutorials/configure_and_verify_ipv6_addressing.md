@@ -97,7 +97,7 @@ Configure the IPv6 address for the PCs.
 
 **PC1 - Alpine Linux**
 
-On PC1, open the file, `/etc/network/interfaces`.
+On PC1, open the file, `/etc/network/interfaces`:
 ```
 PC1:~# vi /etc/network/interfaces
 ```
@@ -126,7 +126,7 @@ This is the username and password for the Debian VMs:
 - username: debian
 - password: debian
 
-On PC2, open the file, `/etc/network/interfaces`.
+On PC2, open the file, `/etc/network/interfaces`:
 ```
 debian@PC2:~$ sudo vim /etc/network/interfaces
 ```
@@ -139,7 +139,7 @@ iface ens4 inet6 static
     gateway fe80::1
 ```
 
-Restart the networking service using the rc-service command
+Restart the networking service using the rc-service command:
 ```
 debian@PC2:~$ sudo systemctl restart networking
 ```
@@ -151,7 +151,7 @@ debian@PC2:~$ ip addr show
 
 **PC3 - Alpine Linux**
 
-On PC3, open the file, `/etc/network/interfaces`.
+On PC3, open the file, `/etc/network/interfaces`:
 ```
 PC3:~# vi /etc/network/interfaces
 ```
@@ -164,7 +164,7 @@ iface eth0 inet6 static
     gateway fe80::2
 ```
 
-Restart the networking service using the rc-service command
+Restart the networking service using the rc-service command:
 ```
 PC3:~# rc-service networking restart
 ```
@@ -176,7 +176,7 @@ PC3:~# ip addr show
 
 **PC4 - Debian**
 
-On PC4, open the file, `/etc/network/interfaces`.
+On PC4, open the file, `/etc/network/interfaces`:
 ```
 debian@PC4:~$ sudo vim /etc/network/interfaces
 ```
@@ -189,7 +189,7 @@ iface ens4 inet6 static
     gateway fe80::2
 ```
 
-Restart the networking service using the rc-service command
+Restart the networking service using the rc-service command:
 ```
 debian@PC4:~$ sudo systemctl restart networking
 ```
