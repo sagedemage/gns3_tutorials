@@ -182,7 +182,7 @@ ubuntu@PC2:~$ ping 192.168.1.1
 ```
 
 ## Save Switch Configurations
-Go to each multilayer switch and save the running configuration to the startup configuration.
+Go to each switch and save the running configuration to the startup configuration.
 
 Save the config for ACC1:
 ```
