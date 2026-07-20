@@ -165,7 +165,6 @@ ACC1# show interface port-channel 1
 ```
 
 ### Configure the IP Address for the PCs
-
 Configure the IP address for the PCs.
 
 **PC1 - Ubuntu Cloud Guest**
@@ -489,7 +488,6 @@ DIST1# show interface port-channel 3
 ```
 
 ### Configure the IP Address for the PCs
-
 Configure the IP address for the PCs.
 
 **PC1 - Ubuntu Cloud Guest**
