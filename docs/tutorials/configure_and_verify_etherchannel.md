@@ -173,7 +173,7 @@ This is the username and password for the Ubuntu VMs:
 - username: ubuntu
 - password: ubuntu
 
-On PC1, open the file, `/etc/netplan/50-cloud-init.yaml`.
+On PC1, open the file, `/etc/netplan/50-cloud-init.yaml`:
 ```
 ubuntu@PC1:~$ sudo vim /etc/netplan/50-cloud-init.yaml
 ```

@@ -104,14 +104,12 @@ This is the username and password for the Ubuntu VMs:
 - username: ubuntu
 - password: ubuntu
 
-On PC1, open the file, `/etc/netplan/50-cloud-init.yaml`.
-
+On PC1, open the file, `/etc/netplan/50-cloud-init.yaml`:
 ```
 ubuntu@PC1:~$ sudo vim /etc/netplan/50-cloud-init.yaml
 ```
 
 Configure the IP address for PC1 in `/etc/netplan/50-cloud-init.yaml`:
-
 ```
 network:
     version: 2
@@ -121,14 +119,12 @@ network:
             dhcp4: false
 ```
 
-Update the networking configuration using the netplan command
-
+Update the networking configuration using the netplan command:
 ```
 ubuntu@PC1:~$ sudo netplan apply
 ```
 
 Check the IP address of the interface eth0:
-
 ```
 ubuntu@PC1:~$ ip addr show
 ```
@@ -139,14 +135,12 @@ This is the username and password for the Ubuntu VMs:
 - username: ubuntu
 - password: ubuntu
 
-On PC1, open the file, `/etc/netplan/50-cloud-init.yaml`.
-
+On PC1, open the file, `/etc/netplan/50-cloud-init.yaml`:
 ```
 ubuntu@PC2:~$ sudo vim /etc/netplan/50-cloud-init.yaml
 ```
 
 Configure the IP address for PC1 in `/etc/netplan/50-cloud-init.yaml`:
-
 ```
 network:
     version: 2
@@ -156,14 +150,12 @@ network:
             dhcp4: false
 ```
 
-Update the networking configuration using the netplan command
-
+Update the networking configuration using the netplan command:
 ```
 ubuntu@PC2:~$ sudo netplan apply
 ```
 
 Check the IP address of the interface eth0:
-
 ```
 ubuntu@PC2:~$ ip addr show
 ```
