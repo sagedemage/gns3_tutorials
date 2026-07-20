@@ -33,6 +33,7 @@ export default defineConfig({
           { text: 'Configure and Verify VLANs', link: '/tutorials/configure_and_verify_vlans.html' },
           { text: 'Configure and Verify Interswitch Connectivity', link: '/tutorials/configure_and_verify_interswitch_connectivity.html' },
           { text: 'Configure and Verify Layer 2 Discovery Protocols', link: '/tutorials/configure_and_verify_layer_2_discovery_protocols.html' },
+          { text: 'Configure and Verify EtherChannel', link: '/tutorials/configure_and_verify_etherchannel.html' },
         ]
       },
       {
