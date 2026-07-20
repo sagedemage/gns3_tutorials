@@ -11,7 +11,7 @@ List of Devices:
 	- Quantity: 3
 	- Device Name: Cisco IOSvL215.2
 
-### IP Address Table for the PCs
+## IP Address Table for the PCs
 PC1:
 - IPv4 Address: 192.168.1.1
 - Subnet Mask: 255.255.255.0
@@ -189,7 +189,7 @@ Ping PC1:
 ubuntu@PC2:~$ ping 192.168.1.1
 ```
 
-### Save Switch Configurations
+## Save Switch Configurations
 Go to each multilayer switch and save the running configuration to the startup configuration.
 
 Save the config for ACC1:
