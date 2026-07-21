@@ -48,7 +48,7 @@ export default defineConfig({
       {
         text: 'IP Services',
         items: [
-          { text: 'Configure and Verify DHCP Client and Server', link: '/tutorials/configure_and_verify_dhcp_client_and_server.html' },
+          { text: 'Configure and Verify DHCP Client and Relay', link: '/tutorials/configure_and_verify_dhcp_client_and_relay.html' },
         ]
       },
       {
@@ -57,6 +57,12 @@ export default defineConfig({
 
         ]
       },
+      {
+        text: 'Extra Tutorials',
+        items: [
+          { text: 'Configure Router as DHCP Server', link: '/tutorials/configure_router_as_dhcp_server.html' },
+        ]
+      }
     ],
 
     socialLinks: [
