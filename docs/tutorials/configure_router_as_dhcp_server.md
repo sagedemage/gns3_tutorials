@@ -1,7 +1,7 @@
 # Configure Router as DHCP Server
 This is a guide to configure the router as a DHCP server.
 
-![Configure DHCP](../images/Configure_and_Verify_DHCP_Client_and_Server.png)
+![Configure Router as DHCP Server](../images/Configure_Router_as_DHCP_Server.png)
 
 List of Devices:
 - Routers:
