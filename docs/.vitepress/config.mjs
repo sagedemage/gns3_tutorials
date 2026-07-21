@@ -49,8 +49,8 @@ export default defineConfig({
         text: 'IP Services',
         items: [
           { text: 'Configure and Verify Inside Source NAT', link: '/tutorials/configure_and_verify_inside_source_nat.html' },
-          { text: 'Configure and Verify DHCP Client and Relay', link: '/tutorials/configure_and_verify_dhcp_client_and_relay.html' },
           { text: 'Configure and Verify NTP', link: '/tutorials/configure_and_verify_ntp.html' },
+          { text: 'Configure and Verify DHCP Client and Relay', link: '/tutorials/configure_and_verify_dhcp_client_and_relay.html' },
         ]
       },
       {
