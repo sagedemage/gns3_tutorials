@@ -81,7 +81,7 @@ R2(config-if)# no shut
 R2(config-if)# end
 ```
 
-## Configure Static IPv6 Routing
+## Configure IPv6 Static Routing
 Configure IPv6 static routing for the routers.
 
 Configure static routing for R1:
