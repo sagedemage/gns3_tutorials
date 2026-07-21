@@ -41,6 +41,7 @@ export default defineConfig({
         text: 'IP Connectivity',
         items: [
           { text: 'Configure and Verify IPv4 Static Routing', link: '/tutorials/configure_and_verify_ipv4_static_routing.html' },
+          { text: 'Configure and Verify IPv6 Static Routing', link: '/tutorials/configure_and_verify_ipv6_static_routing.html' },
         ]
       },
       {
