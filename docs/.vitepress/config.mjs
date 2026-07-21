@@ -42,6 +42,7 @@ export default defineConfig({
         items: [
           { text: 'Configure and Verify IPv4 Static Routing', link: '/tutorials/configure_and_verify_ipv4_static_routing.html' },
           { text: 'Configure and Verify IPv6 Static Routing', link: '/tutorials/configure_and_verify_ipv6_static_routing.html' },
+          { text: 'Configure and Verify Single Area OSPFv2', link: '/tutorials/configure_and_verify_single_area_ospfv2.html' },
         ]
       },
       {
