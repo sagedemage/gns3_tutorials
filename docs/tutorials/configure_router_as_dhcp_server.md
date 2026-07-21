@@ -1,5 +1,5 @@
-# Configure and Verify DHCP Client and Server
-This is a guide to configure and verify DHCP client and server in the network with Linux PCs.
+# Configure Router as DHCP Server
+This is a guide to configure the router as a DHCP server.
 
 ![Configure DHCP](../images/Configure_and_Verify_DHCP_Client_and_Server.png)
 
