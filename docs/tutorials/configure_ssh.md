@@ -292,6 +292,7 @@ host *
 Test the SSH connections from the PC to the routers.
 
 Admin password for the Cisco routers: cisco
+
 Enable password for the Cisco routers: cisco
 
 Test the SSH connection with R1 from PC1:

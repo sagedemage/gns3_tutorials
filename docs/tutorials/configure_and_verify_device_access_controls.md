@@ -424,6 +424,7 @@ Test the SSH connections from the PC to the routers.
 Go to Desktop -> Command Prompt
 
 John password for the Cisco routers: passwd123
+
 Enable password for the Cisco routers: passwd123
 
 Test the SSH connection with R1 from PC1:
