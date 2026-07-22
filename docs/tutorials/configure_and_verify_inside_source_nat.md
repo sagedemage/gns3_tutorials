@@ -3,6 +3,11 @@ This is a guide to configure and verify inside source NAT.
 
 ![Configure and Verify Inside Source NAT](../images/Configure_and_Verify_Inside_Source_NAT.png)
 
+List of Devices:
+- Routers:
+	- Quantity: 6
+	- Device Name: Cisco 3745
+
 These are the network addresses for the inside and outside segments in static and dynamic NAT:
 - Inside Segment: 192.168.1.0/24
 - Outside Segment: 10.1.1.0/24
