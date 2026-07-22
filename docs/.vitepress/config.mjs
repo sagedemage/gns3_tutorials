@@ -59,6 +59,7 @@ export default defineConfig({
         items: [
           { text: 'Configure and Verify Device Access Controls', link: '/tutorials/configure_and_verify_device_access_controls.html' },
           { text: 'Configure and Verify Access Control Lists', link: '/tutorials/configure_and_verify_access_control_lists.html' },
+          { text: 'Configure and Verify Layer 2 Security Features', link: '/tutorials/configure_and_verify_layer_2_security_features.html' },
         ]
       },
       {
